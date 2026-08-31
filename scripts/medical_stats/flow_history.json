@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "runs": [
+    {
+      "timestamp_utc": "2026-08-15T04:12:06.536633Z",
+      "source_flow_path": "scripts/medical_stats/r_flow.R",
+      "snapshot_flow_path": "scripts/medical_stats/flow_runs/r_flow_20260815_041206_536633_cleaning_table1_table1.R",
+      "updated_assignments": [
+        "data_path",
+        "run_table1",
+        "stratify_var",
+        "table1_output_dir",
+        "x_vars"
+      ],
+      "completed_steps": [
+        "cleaning",
+        "table1"
+      ],
+      "latest_run_files": [
+        "output/descriptive/table1.csv",
+        "output/descriptive/table1.html"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-08-15T04:18:39.672233Z",
+      "source_flow_path": "scripts/medical_stats/r_flow.R",
+      "snapshot_flow_path": "scripts/medical_stats/flow_runs/r_flow_20260815_041839_672233_cleaning_table1_univariable_plots_logistic_plots.R",
+      "updated_assignments": [
+        "data_path",
+        "logistic_group_var",
+        "logistic_plot_dir",
+        "logistic_x_vars",
+        "logistic_y_var",
+        "plot_show_p_value",
+        "regression_family",
+        "run_cleaning",
+        "run_table1",
+        "run_univariable_plots"
+      ],
+      "completed_steps": [
+        "cleaning",
+        "table1",
+        "univariable_plots"
+      ],
+      "latest_run_files": [
+        "output/figures/logistic/plot_AUC1.png",
+        "output/figures/logistic/plot_AUCss.png",
+        "output/figures/logistic/plot_Cmax1.png",
+        "output/figures/logistic/plot_Cmaxss.png",
+        "output/figures/logistic/plot_Cmin1.png",
+        "output/figures/logistic/plot_Cminss.png",
+        "output/figures/logistic/plot_descriptive_summary.csv",
+        "output/figures/logistic/plot_observed_summary.csv",
+        "output/figures/logistic/plot_statistics.csv"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-08-15T04:29:52.261672Z",
+      "source_flow_path": "scripts/medical_stats/r_flow.R",
+      "snapshot_flow_path": "scripts/medical_stats/flow_runs/r_flow_20260815_042952_261672_cleaning_table1_univariable_plots_logistic_batch.R",
+      "updated_assignments": [
+        "batch_display",
+        "batch_model_method",
+        "data_path",
+        "logistic_batch_output_dir",
+        "logistic_x_vars",
+        "logistic_y_var",
+        "regression_family",
+        "run_batch_regression",
+        "run_cleaning",
+        "run_table1",
+        "run_univariable_plots"
+      ],
+      "completed_steps": [
+        "cleaning",
+        "table1",
+        "univariable_plots",
+        "batch_regression"
+      ],
+      "latest_run_files": [
+        "output/regression/logistic_batch/logistic_batch_regression_multivariable.csv",
+        "output/regression/logistic_batch/logistic_batch_regression_multivariable_forest.png",
+        "output/regression/logistic_batch/logistic_batch_regression_univariable.csv",
+        "output/regression/logistic_batch/logistic_batch_regression_univariable_forest.png"
+      ]
+    }
+  ]
+}

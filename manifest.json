@@ -1,0 +1,86 @@
+{
+  "mode": "reproducible",
+  "request_summary": "Package the source files for download (scripts, data, and reproducible flow history).",
+  "entrypoint_scripts": [
+    "reproduce.R",
+    "scripts/medical_stats/flow_runs/r_flow_20260815_041206_536633_cleaning_table1_table1.R",
+    "scripts/medical_stats/flow_runs/r_flow_20260815_041839_672233_cleaning_table1_univariable_plots_logistic_plots.R",
+    "scripts/medical_stats/flow_runs/r_flow_20260815_042952_261672_cleaning_table1_univariable_plots_logistic_batch.R"
+  ],
+  "selected_files": [
+    "data/test1.csv",
+    "scripts/medical_stats/README.md",
+    "scripts/medical_stats/baseline_table.R",
+    "scripts/medical_stats/cleaning.R",
+    "scripts/medical_stats/cleaning_plan.json",
+    "scripts/medical_stats/common.R",
+    "scripts/medical_stats/cox_batch_regression.R",
+    "scripts/medical_stats/cox_plots.R",
+    "scripts/medical_stats/cox_stepwise_regression.R",
+    "scripts/medical_stats/flow_history.json",
+    "scripts/medical_stats/flow_runs/r_flow_20260815_041206_536633_cleaning_table1_table1.R",
+    "scripts/medical_stats/flow_runs/r_flow_20260815_041839_672233_cleaning_table1_univariable_plots_logistic_plots.R",
+    "scripts/medical_stats/flow_runs/r_flow_20260815_042952_261672_cleaning_table1_univariable_plots_logistic_batch.R",
+    "scripts/medical_stats/inspect_data.R",
+    "scripts/medical_stats/linear_batch_regression.R",
+    "scripts/medical_stats/linear_plots.R",
+    "scripts/medical_stats/linear_stepwise_regression.R",
+    "scripts/medical_stats/logistic_batch_regression.R",
+    "scripts/medical_stats/logistic_plots.R",
+    "scripts/medical_stats/logistic_prediction.R",
+    "scripts/medical_stats/logistic_stepwise_regression.R",
+    "scripts/medical_stats/r_flow.R",
+    "output/data/cleaned_data.csv",
+    "output/data/cleaned_data.rds",
+    "README.md",
+    "reproduce.R",
+    "manifest.json"
+  ],
+  "data_inputs": [
+    "data/test1.csv"
+  ],
+  "template_files": [
+    "scripts/medical_stats/README.md",
+    "scripts/medical_stats/baseline_table.R",
+    "scripts/medical_stats/cleaning.R",
+    "scripts/medical_stats/common.R",
+    "scripts/medical_stats/cox_batch_regression.R",
+    "scripts/medical_stats/cox_plots.R",
+    "scripts/medical_stats/cox_stepwise_regression.R",
+    "scripts/medical_stats/inspect_data.R",
+    "scripts/medical_stats/linear_batch_regression.R",
+    "scripts/medical_stats/linear_plots.R",
+    "scripts/medical_stats/linear_stepwise_regression.R",
+    "scripts/medical_stats/logistic_batch_regression.R",
+    "scripts/medical_stats/logistic_plots.R",
+    "scripts/medical_stats/logistic_prediction.R",
+    "scripts/medical_stats/logistic_stepwise_regression.R",
+    "scripts/medical_stats/r_flow.R"
+  ],
+  "intermediate_inputs": [
+    "output/data/cleaned_data.csv",
+    "output/data/cleaned_data.rds"
+  ],
+  "excluded_products": [
+    "output/descriptive/**",
+    "output/figures/**",
+    "output/regression/**",
+    "reports/**",
+    "output/analysis_packet.json",
+    "output/packages/**"
+  ],
+  "path_rewrites_in_staging": [],
+  "validation": {
+    "status": "pending",
+    "method": "Planned: unzip into a temporary directory and source reproduce.R with R to replay all flow snapshots.",
+    "tested_entrypoint": "reproduce.R",
+    "generated_outputs": [],
+    "error": ""
+  },
+  "assumptions": [
+    "The cleaning step was performed with the standard cleaning tool and is documented in scripts/medical_stats/cleaning_plan.json; its outputs are included as intermediate inputs.",
+    "Complete-case listwise deletion (100 to 67 rows) was applied during cleaning and is documented in README.md.",
+    "The three recorded flow snapshots are the canonical entrypoints and must be replayed in chronological order.",
+    "The stepwise regression run selected no variables and therefore has no recorded flow snapshot; it is not part of the reproducible replay."
+  ]
+}
